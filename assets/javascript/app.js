@@ -24,37 +24,37 @@ $(document).ready(function () {
             },
             set4: {
                 question: "4. In 2004, what rare hurricane-related weather phenomenon occured?",
-                answer: ["A hurricane in the Southern Atlantic", "No tropical systems in the Eastern Pacific", "No hurricanes with U.S. landfall", "A hurricane off the coast of California", "ans3"],
+                answer: ["A hurricane in the Southern Atlantic", "No tropical systems in the Eastern Pacific", "No hurricanes with U.S. landfall", "A hurricane off the coast of California", "ans4"],
                 correct: "A hurricane in the Southern Atlantic "
             },
             set5: {
                 question: "5. How many name lists are used in rotation for the Atlantic Hurricane season?",
-                answer: ["Six", "Seven", "Five", "It's different every year", "ans3"],
+                answer: ["Six", "Seven", "Five", "It's different every year", "ans5"],
                 correct: "Six"
             },
             set6: {
                 question: "6. At one time, tropical storm systems were given exclusively female names. In what year did male names start appearing on the lists?",
-                answer: [" 1980", "1981", " 1979", "1978", "ans3"],
+                answer: [" 1980", "1981", " 1979", "1978", "ans6"],
                 correct: "1978"
             },
             set7: {
                 question: "7. When is the Atlantic hurricane season?",
-                answer: ["June 1 - November 30", "May 15 - December 15", "May 1 - October 31", "July 1 - October 31", "ans3"],
+                answer: ["June 1 - November 30", "May 15 - December 15", "May 1 - October 31", "July 1 - October 31", "ans7"],
                 correct: "June 1 - November 30"
             },
             set8: {
                 question: "8. When a tropical depression forms, it is closely monitored for any further development. When the sustained wind speeds reach a certain point, the system is then elevated to Tropical Storm status and it is given a name. At which wind speed does this occur?",
-                answer: ["39 mph (63 k/ph)", "45 mph (72 k/ph)", "35 mph (56 k/ph)", "42 mph (68 k/ph)", "ans3"],
+                answer: ["39 mph (63 k/ph)", "45 mph (72 k/ph)", "35 mph (56 k/ph)", "42 mph (68 k/ph)", "ans8"],
                 correct: "39 mph (63 k/ph)"
             },
             set9: {
                 question: "9. Which of the following pairs of Atlantic hurricane names are the first ones to be retired?",
-                answer: ["Betsy and Cleo", "Agnes and Elena", "Audrey and Janet", "Carol and Hazel", "ans3"],
+                answer: ["Betsy and Cleo", "Agnes and Elena", "Audrey and Janet", "Carol and Hazel", "ans9"],
                 correct: "Carol and Hazel"
             },
             set10: {
                 question: "10. In what year were names first officially assigned to Atlantic tropical systems?",
-                answer: ["1964", "1959", "1953", "1945", "ans3"],
+                answer: ["1964", "1959", "1953", "1945", "ans10"],
                 correct: "1953"
             }
 
