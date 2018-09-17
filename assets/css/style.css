@@ -1,0 +1,18 @@
+.container-fluid{
+    padding:20px 0 20px 0;
+    background-image: url('../images/mnbg.jpg');
+    height:100vh;
+    overflow: auto;
+}
+.wrapper{
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:20px;
+    opacity: 0.9;
+    min-height:80%;
+    width:80%;
+    margin:auto;
+    background-color: white;
+    text-align: center;
+    
+}
