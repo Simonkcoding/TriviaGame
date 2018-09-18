@@ -107,7 +107,7 @@ $(document).ready(function () {
 
         //generate submit button
         var addSubmitBtn = $("<button>");
-        addSubmitBtn.addClass("button submit-btn");
+        addSubmitBtn.addClass("button btn-success btn-lg submit-btn");
         addSubmitBtn.text('Submit');
         $(".quiz-section").append('<br>');
         $(".quiz-section").append(addSubmitBtn);
