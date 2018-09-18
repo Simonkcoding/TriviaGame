@@ -102,7 +102,6 @@ $(document).ready(function () {
                 $(".quiz-section").append(addInput);
                 $(".quiz-section").append('<p style="display:inline">' + quiz[set].answer[i] + '</p><br>');
             }
-
         };
 
         //generate submit button
