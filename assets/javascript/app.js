@@ -1,10 +1,12 @@
 
 $(document).ready(function () {
+
     $('.start-btn').click(function () {
 
-        // $('.start-btn').attr("style", "display:none");
+        //hide start button
         $('.start-btn').hide();
         $('.quiz-section').empty();
+
         // Generate quiz page with jquery
         var quiz = {
             set1: {
@@ -60,11 +62,11 @@ $(document).ready(function () {
 
         };
 
-        $('.quiz-section').append('<div class="timer"><p>You have <span class="time-Text">??</span> second to answer!</p></div>');
+        $('.quiz-section').append('<div class="timer"><p>You have <span class="time-Text">60</span> second to answer!</p></div>');
 
         var isTimerOn = false;
         //Timer
-        var timeCountDown = 120; // 2mins
+        var timeCountDown = 60; // 2mins
         if (isTimerOn == false) {
             var timer = setInterval(function () {
                 timeCountDown--;
@@ -82,11 +84,11 @@ $(document).ready(function () {
         var ansArray = [];
 
         for (var set in quiz) {
-            //Correct Ans array
+            //Correct Ans array for comparison
             ansArray.push(quiz[set].correct);
             //Display question
             $(".quiz-section").append('<br><p>' + quiz[set].question + '</p><br>');
-            for (var i = 0; i < 4; i++) {
+            for (var i = 0; i < 4; i++) { // first 4 (0,1,2,3) arguments are answers
                 var addInput = $("<input>");
                 addInput.addClass("radioChoice");
                 addInput.attr("type", 'radio');
@@ -102,6 +104,7 @@ $(document).ready(function () {
 
         console.log(ansArray);
 
+        //generate submit button
         var addSubmitBtn = $("<button>");
         addSubmitBtn.addClass("button submit-btn");
         addSubmitBtn.text('Submit');
@@ -114,13 +117,12 @@ $(document).ready(function () {
         //generate an array to store user's choice
         var userArray = [];
 
+        //submit button
         $('.submit-btn').click(function () {
             getResult();
         });
 
         //time up and submit will trigger this function
-
-
         function getResult() {
             correctCount = 0;
             var getCheckedInput = $('Input:checked');
@@ -139,6 +141,8 @@ $(document).ready(function () {
             console.log(correctCount);
             console.log(skippedCount);
             console.log(wrongCount);
+
+            // result page looks like
             $('.quiz-section').empty();
             $('.quiz-section').append("<p> Correct:" + correctCount + "</p>");
             $('.quiz-section').append("<p> Wrong:" + wrongCount + "</p>");
