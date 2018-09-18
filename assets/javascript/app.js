@@ -65,7 +65,7 @@ $(document).ready(function () {
         };
 
         //timer text
-        $('.quiz-section').append('<div class="timer"><p>You have <span class="time-Text">60</span> second to answer!</p></div>');
+        $('.quiz-section').append('<div class="timer"><h2>You have <span class="time-Text">60</span> second to answer!</h2></div>');
 
         
         //Timer
