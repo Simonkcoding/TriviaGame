@@ -1,13 +1,15 @@
 
 $(document).ready(function () {
 
+    //the game start when pressing start btn
     $('.start-btn').click(function () {
 
-        //hide start button
+        //hide start button and clear the div
         $('.start-btn').hide();
         $('.quiz-section').empty();
 
         // Generate quiz page with jquery
+        // quiz items
         var quiz = {
             set1: {
                 question: "1. What is the difference between hurricanes and typhoons?",
@@ -62,27 +64,28 @@ $(document).ready(function () {
 
         };
 
+        //timer text
         $('.quiz-section').append('<div class="timer"><p>You have <span class="time-Text">60</span> second to answer!</p></div>');
 
-        var isTimerOn = false;
+        
         //Timer
-        var timeCountDown = 60; // 2mins
+        var isTimerOn = false;
+        var timeCountDown = 60; // 1mins
         if (isTimerOn == false) {
             var timer = setInterval(function () {
                 timeCountDown--;
                 $('.time-Text').text(timeCountDown);
                 if (timeCountDown <= 0) {
-                    getResult();
+                    getResult(); //time out, get result
                 }
             }, 1000);
             isTimerOn = true;
         }
 
 
-        //quiz layout            
-        console.log(ansArray);
+        //quiz layout
+        // ansArray to take argument from sub-sets            
         var ansArray = [];
-
         for (var set in quiz) {
             //Correct Ans array for comparison
             ansArray.push(quiz[set].correct);
@@ -102,8 +105,6 @@ $(document).ready(function () {
 
         };
 
-        console.log(ansArray);
-
         //generate submit button
         var addSubmitBtn = $("<button>");
         addSubmitBtn.addClass("button submit-btn");
@@ -111,9 +112,6 @@ $(document).ready(function () {
         $(".quiz-section").append('<br>');
         $(".quiz-section").append(addSubmitBtn);
 
-        var correctCount;
-        var skippedCount;
-        var wrongCount;
         //generate an array to store user's choice
         var userArray = [];
 
@@ -122,6 +120,10 @@ $(document).ready(function () {
             getResult();
         });
 
+        //score calculation
+        var correctCount;
+        var skippedCount;
+        var wrongCount;
         //time up and submit will trigger this function
         function getResult() {
             correctCount = 0;
@@ -129,7 +131,7 @@ $(document).ready(function () {
             $('Input:checked').each(function () {
                 userArray.push($(this).val());
             });
-            // Compare userArray and ansArray
+            // Compare userArray and ansArray using indexOf
             for (var i = 0; i < userArray.length; i++) {
                 if (ansArray.indexOf(userArray[i]) > -1) {
                     correctCount++;
